@@ -19,7 +19,7 @@ include(FetchContent)
 FetchContent_Declare(
     MatrixClassDemo
     GIT_REPOSITORY https://github.com/CSE-625-Fall-2026/MatrixClassDemo.git
-    GIT_TAG v1.0.0
+    GIT_TAG v2.0.0
     GIT_SHALLOW TRUE
 )
 

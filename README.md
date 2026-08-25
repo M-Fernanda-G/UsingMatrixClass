@@ -1,6 +1,6 @@
 # UsingMatrixClass
 
-Fetches `MatrixClassDemo` version `v1.0.0` with CMake `FetchContent`.
+Fetches `MatrixClassDemo` version `v2.0.0` with CMake `FetchContent`.
 
 ## Build and run
 

@@ -6,8 +6,8 @@
 int main() {
     constexpr std::size_t square_size = 1000;
 
-    matrix::Matrix first(square_size, square_size);
-    matrix::Matrix second(square_size, square_size);
+    matrix::Matrix<double> first(square_size, square_size);
+    matrix::Matrix<double> second(square_size, square_size);
     std::mt19937 generator(std::random_device{}());
     std::uniform_int_distribution<int> distribution(0, 255);
 
@@ -18,7 +18,7 @@ int main() {
         }
     }
 
-    const matrix::Matrix result = first * second;
+    const matrix::Matrix<double> result = first * second;
 
     return result.getNumRows() == square_size ? 0 : 1;
 }
