@@ -83,7 +83,8 @@ TEST(GlobalNew, ReportsRearCanaryCorruption) {
     error_reported = false;
 
     char* values = new char[8];
-    values[8] = 0;
+    volatile char* observable_values = values;
+    observable_values[8] = 0;
     delete[] values;
 
     EXPECT_TRUE(error_reported);

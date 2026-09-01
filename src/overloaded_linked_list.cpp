@@ -1,4 +1,4 @@
-#include "MatrixArrayWorkload.hpp"
+#include "LinkedListWorkload.hpp"
 
 #include <custom_memory/GlobalNew.hpp>
 
@@ -17,7 +17,7 @@ bool shutdownMemory() noexcept {
 }
 
 int main(int argument_count, char** arguments) {
-    return matrix_array_workload::run(
+    return linked_list_workload::run(
         argument_count,
         arguments,
         "overloaded new",

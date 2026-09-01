@@ -1,4 +1,4 @@
-#include "MatrixArrayWorkload.hpp"
+#include "NestedMatrixStress.hpp"
 
 #include <cstddef>
 
@@ -15,7 +15,7 @@ bool shutdownMemory() noexcept {
 }
 
 int main(int argument_count, char** arguments) {
-    return matrix_array_workload::run(
+    return nested_matrix_stress::run(
         argument_count,
         arguments,
         "regular new",

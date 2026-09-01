@@ -1,4 +1,4 @@
-#include "MatrixArrayWorkload.hpp"
+#include "UniformMatrixNodes.hpp"
 
 #include <custom_memory/GlobalNew.hpp>
 
@@ -17,11 +17,11 @@ bool shutdownMemory() noexcept {
 }
 
 int main(int argument_count, char** arguments) {
-    return matrix_array_workload::run(
+    return uniform_matrix_nodes::run(
         argument_count,
         arguments,
-        "overloaded new",
         initializeMemory,
-        shutdownMemory
+        shutdownMemory,
+        "overloaded new"
     );
 }

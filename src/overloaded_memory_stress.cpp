@@ -1,4 +1,4 @@
-#include "MatrixArrayWorkload.hpp"
+#include "NestedMatrixStress.hpp"
 
 #include <custom_memory/GlobalNew.hpp>
 
@@ -6,8 +6,8 @@
 
 namespace {
 
-bool initializeMemory(std::size_t pool_size) noexcept {
-    return custom_memory::initialize(pool_size);
+bool initializeMemory(std::size_t bytes) noexcept {
+    return custom_memory::initialize(bytes);
 }
 
 bool shutdownMemory() noexcept {
@@ -17,7 +17,7 @@ bool shutdownMemory() noexcept {
 }
 
 int main(int argument_count, char** arguments) {
-    return matrix_array_workload::run(
+    return nested_matrix_stress::run(
         argument_count,
         arguments,
         "overloaded new",
